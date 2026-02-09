@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>H&J ERP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="app" style="display:none">
+  <aside>
+    <strong id="userInfo"></strong>
+    <button onclick="Auth.logout()">Salir</button>
+    <nav>
+      <a href="#" class="nav-link" data-section="dashboard"
+         onclick="UI.show('dashboard')">Dashboard</a>
+    </nav>
+  </aside>
+
+  <main>
+    <section id="dashboard">Bienvenido</section>
+  </main>
+</div>
+
+<script type="module" src="js/firebase.js"></script>
+<script type="module" src="js/auth.js"></script>
+<script type="module" src="js/ui.js"></script>
+
+<script type="module">
+  import "./js/auth.js";
+  Auth.init();
+</script>
+
+</body>
+</html>
